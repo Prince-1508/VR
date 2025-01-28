@@ -1,0 +1,179 @@
+/* General Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #f0f8ff, #e6e6fa);
+  color: #333;
+}
+
+header {
+  background-color: #24023c;
+  color: #fff;
+  text-align: center;
+  padding: 20px 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+  animation: fadeIn 2s ease-in-out;
+}
+
+header p {
+  margin: 5px 0 0;
+  font-size: 1.2em;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+}
+
+.facilities-section {
+  width: 45%;
+  animation: slideInLeft 1.5s ease-out;
+}
+
+.facilities-section h2 {
+  text-align: center;
+  color: #4682b4;
+}
+
+.facilities-table {
+  margin: 20px auto;
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  animation: blink 2s infinite alternate;
+}
+
+.facilities-table th, 
+.facilities-table td {
+  border: 1px solid #add8e6;
+  padding: 10px;
+  text-align: center;
+  background-color: #f8f9fa;
+}
+
+.facilities-table th {
+  background-color: #4682b4;
+  color: #fff;
+}
+
+.image-section {
+  width: 45%;
+  animation: slideInRight 1.5s ease-out;
+}
+
+.durga-image {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.durga-image:hover {
+  transform: scale(1.05);
+}
+
+.cta-section {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.book-now {
+  padding: 12px 25px;
+  font-size: 1.2em;
+  width: 500px; /* Optional: Fixed width */
+  height: 50px; /* Optional: Fixed height */
+  color: #fff;
+  background-color: #32cd32;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.book-now:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(50, 205, 50, 0.5);
+}
+
+footer {
+  background-color: #24023c;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9em;
+}
+
+/* Animations */
+@keyframes blink {
+  from {
+    background-color: #f8f9fa;
+  }
+  to {
+    background-color: #ffffe0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+/* Price Button */
+.price-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #ff9800;
+  width: 100px; /* Optional: Fixed width */
+  height: 50px; /* Optional: Fixed height */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: default;
+  display: block; /* Ensures the button takes up space like a block element */
+  margin: 0 auto; /* Centers it horizontally */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: pulse 1.5s infinite;
+}

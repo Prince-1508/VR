@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book your Virtual Darshan to experience divine blessings from renowned temples across India.">
+  <meta name="keywords" content="Virtual Darshan, Temple Booking, Vaishno Devi, Tirupati Balaji, Kedarnath, Golden Temple">
+  <meta name="author" content="Virtual Darshan Team">
+  <title>Virtual Darshan Booking</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Styling for temple cards */
+    .temple-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 2px solid transparent;
+      border-radius: 10px;
+    }
+    .temple-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      border-color: #FFD700; /* Yellow border glow */
+    }
+    /* Dark theme styles */
+    body.dark {
+      background-color: #1a202c;
+      color: #cbd5e0;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 font-sans">
+  <!-- Splash Screen -->
+  <div id="splash-screen" class="fixed inset-0 flex items-center justify-center bg-white z-50">
+    <img src="images/logo_2.png" alt="Virtual Darshan Screen" class="w-40 animate-bounce">
+  </div>
+
+  <!-- Header -->
+  <header class="bg-white shadow-md fixed w-full top-0 z-10">
+    <div class="container mx-auto flex justify-between items-center px-6 py-4">
+      <div class="text-2xl font-bold text-indigo-600">Virtual Darshan</div>
+      <nav>
+        <ul class="flex space-x-6">
+          <li><a href="index.html" class="text-gray-700 hover:text-indigo-600">Home</a></li>
+          <li><a href="temple.html" class="text-gray-700 hover:text-indigo-600">Temples</a></li>
+          <li><a href="contact_us.html" class="text-gray-700 hover:text-indigo-600">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="theme-toggle" class="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-800 flex items-center justify-center">
+        <svg id="theme-icon" class="w-6 h-6 text-gray-800 dark:text-gray-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m8.66-13.66l-.71-.71m-15.54 0l-.71.71M21 12h-1M4 12H3m16.66 6.66l-.71-.71M4.05 4.05l-.71.71M12 5a7 7 0 110 14 7 7 0 010-14z"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Temples Section -->
+  <section id="temples" class="mt-24 container mx-auto px-6 py-12">
+    <h1 class="text-3xl font-bold text-center text-indigo-600 mb-8">Book Your Virtual Darshan</h1>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Temple Cards -->
+      <div class="temple-card bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src="images/vaishno_devi_image.jpg" alt="Vaishno Devi Temple" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-lg font-bold text-gray-700">Vaishno Devi</h3>
+          <p class="text-gray-600">Experience the divine vibes of Vaishno Devi.</p>
+          <button class="btn bg-indigo-600 text-white px-4 py-2 mt-4 rounded hover:bg-indigo-700" onclick="bookTemple('temple_details.html')">Book Now</button>
+        </div>
+      </div>
+
+      <div class="temple-card bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src="images/kedarnath1.jpg" alt="Kedarnath Temple" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-lg font-bold text-gray-700">Kedarnath</h3>
+          <p class="text-gray-600">Embrace the serenity of Lord Shiva's abode.</p>
+          <button class="btn bg-indigo-600 text-white px-4 py-2 mt-4 rounded hover:bg-indigo-700" onclick="bookTemple('Temple_details1.html')">Book Now</button>
+        </div>
+      </div>
+
+      <div class="temple-card bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src="images/tirupati_balaji.jpg" alt="Tirupati Balaji Temple" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-lg font-bold text-gray-700">Tirupati Balaji</h3>
+          <p class="text-gray-600">Feel the blessings of Lord Venkateswara.</p>
+          <button class="btn bg-indigo-600 text-white px-4 py-2 mt-4 rounded hover:bg-indigo-700" onclick="bookTemple('Tirupati_Balaji_Booking.html')">Book Now</button>
+        </div>
+      </div>
+
+      <div class="temple-card bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src="images/golden_temple.jpeg" alt="Golden Temple" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-lg font-bold text-gray-700">Golden Temple</h3>
+          <p class="text-gray-600">Witness the peacefulness of Harmandir Sahib.</p>
+          <button class="btn bg-indigo-600 text-white px-4 py-2 mt-4 rounded hover:bg-indigo-700" onclick="bookTemple('golden_temple_booking.html')">Book Now</button>
+        </div>
+      </div>
+
+      <div class="temple-card bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src="images/haridwar.jpg" alt="Haridwar" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-lg font-bold text-gray-700">Haridwar</h3>
+          <p class="text-gray-600">Immerse yourself in the sacred vibes of Haridwar.</p>
+          <button class="btn bg-indigo-600 text-white px-4 py-2 mt-4 rounded hover:bg-indigo-700" onclick="bookTemple('haridwar_booking.html')">Book Now</button>
+        </div>
+      </div>
+
+      <div class="temple-card bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src="images/vridavan.jpg" alt="Vrindavan" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-lg font-bold text-gray-700">Vrindavan</h3>
+          <p class="text-gray-600">Experience the enchanting devotion of Vrindavan.</p>
+          <button class="btn bg-indigo-600 text-white px-4 py-2 mt-4 rounded hover:bg-indigo-700" onclick="bookTemple('Vrindavan_Booking.html')">Book Now</button>
+        </div>
+      </div>
+
+      <div class="temple-card bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src="images/kashi.jpg" alt="Kashi Vishwanath" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-lg font-bold text-gray-700">Kashi Vishwanath</h3>
+          <p class="text-gray-600">Seek the blessings of Lord Shiva at Kashi Vishwanath.</p>
+          <button class="btn bg-indigo-600 text-white px-4 py-2 mt-4 rounded hover:bg-indigo-700" onclick="bookTemple('kashi_vishwanath_booking.html')">Book Now</button>
+        </div>
+      </div>
+
+      <div class="temple-card bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src="images/jagannath_puri.jpeg" alt="Jagannath Puri" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-lg font-bold text-gray-700">Jagannath Puri</h3>
+          <p class="text-gray-600">Feel the divine presence of Lord Jagannath.</p>
+          <button class="btn bg-indigo-600 text-white px-4 py-2 mt-4 rounded hover:bg-indigo-700" onclick="bookTemple('jaganath_puri_booking.html')">Book Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-4">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2024 Virtual Darshan. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Splash Screen Logic
+    window.addEventListener('load', () => {
+      const splash = document.getElementById('splash-screen');
+      setTimeout(() => {
+        splash.classList.add('opacity-0');
+        setTimeout(() => splash.remove(), 500);
+      }, 1500);
+    });
+
+    // Booking Temple Logic
+    function bookTemple(page) {
+      window.location.href = page;
+    }
+
+    // Dark/Light Mode Toggle
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    themeToggle.addEventListener('click', () => {
+      body.classList.toggle('dark');
+    });
+  </script>
+</body>
+</html>

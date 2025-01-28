@@ -1,0 +1,153 @@
+/* Dark Theme Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #121212;
+    color: #e0e0e0;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(90deg, #673ab7, #512da8);
+    color: white;
+    font-size: 1.8rem;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.planner {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+}
+
+.locations {
+    width: 30%;
+    background: #1e1e1e;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.locations h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #ffca28;
+}
+
+.locations ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.locations li {
+    padding: 10px;
+    margin: 5px 0;
+    text-align: center;
+    background: #2a2a2a;
+    border: 1px solid #333;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    color: #ffffff;
+}
+
+.locations li:hover,
+.locations li.active {
+    background: linear-gradient(90deg, #ff4081, #ff80ab);
+    color: white;
+    box-shadow: 0 4px 10px rgba(255, 64, 129, 0.5);
+}
+
+.details {
+    width: 70%;
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.details h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #ffca28;
+}
+
+#services-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.result {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.calculate-btn {
+    background: linear-gradient(90deg, #ff4081, #ff80ab);
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 64, 129, 0.4);
+}
+
+.calculate-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(255, 64, 129, 0.7);
+}
+
+#final-message {
+    text-align: center;
+    margin-top: 30px;
+    display: none;
+}
+
+#final-message h2 {
+    color: #ffca28;
+    font-size: 2rem;
+    animation: fadeIn 1.5s ease;
+}
+
+.mantra {
+    color: #ff80ab;
+    font-size: 1.8rem;
+    animation: glow 2s infinite;
+}
+
+.jai-mata-di {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffca28;
+    animation: zoom 1.5s infinite;
+}
+
+/* Animations */
+@keyframes glow {
+    0%, 100% {
+        text-shadow: 0 0 10px #ff80ab, 0 0 20px #ff4081;
+    }
+    50% {
+        text-shadow: 0 0 20px #ff4081, 0 0 40px #ff80ab;
+    }
+}
+
+@keyframes zoom {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}

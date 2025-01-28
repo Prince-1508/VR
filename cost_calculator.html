@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaishno Devi Trip Calculator</title>
+    <link rel="stylesheet" href="cost_calculator.css">
+</head>
+<body>
+    <header>
+        <h1>✨ Vaishno Devi Budget Calculator ✨</h1>
+        <p>Plan your divine journey with ease and style!</p>
+    </header>
+    <main>
+        <section class="planner">
+            <aside class="locations">
+                <h2>Choose a Location</h2>
+                <ul id="location-list">
+                    <li data-location="katra" class="active">Katra</li>
+                    <li data-location="ardhkuwari">Ardhkuwari</li>
+                    <li data-location="sanjhichath">Sanjhichath</li>
+                    <li data-location="bhawan">Bhawan</li>
+                    <li data-location="bhairav-mandir">Bhairav Mandir</li>
+                </ul>
+            </aside>
+            <div class="details">
+                <h3>Available Services for <span id="current-location">Katra</span></h3>
+                <form id="cost-form">
+                    <div id="services-container">
+                        <!-- Dynamic service options will load here -->
+                    </div>
+                    <div class="result">
+                        <h4>Total Cost: ₹<span id="total-cost">0</span></h4>
+                        <button id="calculate-button" type="button" class="calculate-btn">
+                            Calculate Budget
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section id="final-message" class="hidden">
+            <h2>Total Budget: ₹<span id="final-cost"></span></h2>
+            <p class="mantra">✨ Chalo Bulawa Aaya Hai ✨</p>
+            <p class="jai-mata-di">Jai Mata Di!</p>
+        </section>
+    </main>
+    <script src="cost_calculator.js"></script>
+</body>
+</html>

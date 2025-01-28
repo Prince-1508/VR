@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="payment-section">
+    <h2>Book Your Virtual Darshan</h2>
+    <form onsubmit="submitPayment(event)">
+      <label for="date">Select Date:</label>
+      <input type="date" id="date" required>
+
+      <label for="time">Select Time Slot:</label>
+      <select id="time" required>
+        <option value="6 AM">6:00 AM</option>
+        <option value="8 AM">8:00 AM</option>
+      </select>
+
+      <button type="submit">Proceed</button>
+    </form>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

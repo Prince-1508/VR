@@ -1,0 +1,109 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #ffe6cc, #ffd5e5);
+}
+
+.header {
+  background-color: #800000;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.image-section {
+  text-align: center;
+  padding: 20px;
+}
+
+.durga-image {
+  max-width: 80%;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 2s ease-in-out;
+}
+
+.facilities {
+  padding: 20px;
+  text-align: center;
+}
+
+.facilities h2 {
+  color: #333;
+  animation: pulse 2s infinite;
+}
+
+.facilities-table {
+  margin: 20px auto;
+  border-collapse: collapse;
+  width: 80%;
+  border: 2px solid #800000;
+  animation: blink 1s infinite alternate;
+}
+
+.facilities-table th,
+.facilities-table td {
+  border: 1px solid #800000;
+  padding: 10px;
+  text-align: center;
+  background-color: #ffe6cc;
+  color: #333;
+}
+
+.facilities-table th {
+  background-color: #ffd5e5;
+  color: #800000;
+}
+
+.cta-section {
+  text-align: center;
+  padding: 20px;
+}
+
+.book-now {
+  padding: 10px 20px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #28a745;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.book-now:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(0, 128, 0, 0.5);
+}
+
+/* Animations */
+@keyframes blink {
+  from {
+    background-color: #ffe6cc;
+  }
+  to {
+    background-color: #fff78e;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    color: #800000;
+  }
+  50% {
+    color: #333;
+  }
+}

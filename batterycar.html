@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battery Car Booking</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #f5f5f5;
+        }
+
+        header {
+            background-color: #1f1f1f;
+            color: #ffffff;
+            padding: 1rem 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .navbar .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .navbar ul li {
+            display: inline;
+        }
+
+        .navbar ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .navbar ul li a:hover {
+            color: #ff9800;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        select, input[type="text"] {
+            width: 100%;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 5px;
+            background-color: #1f1f1f;
+            color: #f5f5f5;
+            outline: none;
+            font-size: 1rem;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        select:hover, input:hover {
+            background-color: #2a2a2a;
+            transform: scale(1.02);
+        }
+
+        .slots {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .slot {
+            width: 150px;
+            height: 30px;
+            padding: 0.75rem;
+            text-align: center;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .slot.available {
+            background-color: #388e3c;
+            color: #ffffff;
+        }
+
+        .slot.selected {
+            background-color: #058118;
+        }
+
+        .slot:hover {
+            transform: scale(1.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .form-actions {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        button {
+            background-color: #6200ea;
+            color: #ffffff;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #3700b3;
+            transform: scale(1.05);
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">Battery Car Booking</div>
+            <ul>
+                <li><a href="online_services.html">Home</a></li>
+                <li><a href="#slots">Available Slots</a></li>
+                <li><a href="#terms" onclick="viewTerms()">Terms and Conditions</a></li>
+                <li><a href="contact_us.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    <main class="container">
+        <div class="form-group">
+            <label for="route">Route</label>
+            <select id="route" onchange="updatePrice()">
+                <option value="Adhkuwari-Bhawan">Adhkuwari - Bhawan</option>
+                <option value="Bhawan-Adhkuwari">Bhawan - Adhkuwari</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="company">Battery Car Company</label>
+            <select id="company">
+                <option value="Prevalence Green">Prevalence Green</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Total Amount: ₹</label>
+            <input type="text" id="total-amount" value="450" disabled>
+        </div>
+
+        <div class="section-title">Available Slots</div>
+        <div class="slots" id="slots">
+            <div class="slot available" onclick="selectSlot(this)">15:00</div>
+            <div class="slot available" onclick="selectSlot(this)">17:00</div>
+            <div class="slot available" onclick="selectSlot(this)">19:00</div>
+            <div class="slot available" onclick="selectSlot(this)">21:30</div>
+        </div>
+
+        <div class="form-actions">
+            <button onclick="handleSubmit()">Book Now</button>
+        </div>
+    </main>
+     <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-4">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2024 Virtual Darshan. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+    <script>
+        function updatePrice() {
+            const route = document.getElementById("route").value;
+            const priceInput = document.getElementById("total-amount");
+
+            if (route === "Adhkuwari-Bhawan") {
+                priceInput.value = "450";
+            } else if (route === "Bhawan-Adhkuwari") {
+                priceInput.value = "350";
+            }
+        }
+
+        function selectSlot(slot) {
+            document.querySelectorAll(".slot").forEach(s => s.classList.remove("selected"));
+            slot.classList.add("selected");
+        }
+
+        function handleSubmit() {
+            const selectedRoute = document.getElementById("route").value;
+            const totalPrice = document.getElementById("total-amount").value;
+            alert(`You have booked a slot for ${selectedRoute} at ₹${totalPrice}.`);
+            window.location.href = "https://online.maavaishnodevi.org/#/login";
+        }
+
+
+    </script>
+</body>
+</html>

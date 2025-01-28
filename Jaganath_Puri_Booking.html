@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jagannath Puri Booking</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <style>
+    /* Custom styles for animations and interactive elements */
+    .time-slot {
+      background-color: #4CAF50;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .time-slot:hover {
+      background-color: #45a049;
+      transform: scale(1.05);
+    }
+
+    .time-slot.selected {
+      background-color: #2D8738;
+      transform: scale(1.1);
+    }
+
+    .price {
+      color: #FF7F50;
+      font-weight: bold;
+      font-size: 1.25rem;
+      transition: color 0.3s ease;
+    }
+
+    .price:hover {
+      color: #FF6347;
+    }
+
+    .form-element {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.5s forwards;
+    }
+
+    .form-element:nth-child(1) {
+      animation-delay: 0.2s;
+    }
+
+    .form-element:nth-child(2) {
+      animation-delay: 0.4s;
+    }
+
+    .form-element:nth-child(3) {
+      animation-delay: 0.6s;
+    }
+
+    .form-element:nth-child(4) {
+      animation-delay: 0.8s;
+    }
+
+    .form-element:nth-child(5) {
+      animation-delay: 1s;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    #address {
+      height: 80px;
+      resize: none;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    #address:focus {
+      box-shadow: 0 0 10px #4CAF50;
+      transform: scale(1.02);
+    }
+
+    .input-animated {
+      border: 2px solid #4CAF50;
+      border-radius: 8px;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+      padding: 0.5rem;
+      font-size: 1rem;
+    }
+
+    .input-animated:focus {
+      box-shadow: 0 0 10px rgba(76, 175, 80, 0.7);
+      transform: scale(1.03);
+    }
+
+    .coupon {
+      background-color: #ffffff;
+      border: 2px dashed #4CAF50;
+      border-radius: 10px;
+      padding: 1rem;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .coupon:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .coupon.selected {
+      background-color: #f9f9f9;
+      border-color: #FF6347;
+    }
+
+    .price-bar {
+      background-color: #FFEB3B;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #333;
+      border-radius: 10px;
+      margin-top: 20px;
+      animation: slideUp 0.5s ease;
+    }
+
+    .price-strike {
+      text-decoration: line-through;
+      color: #999;
+      font-size: 1.25rem;
+      margin-right: 0.5rem;
+    }
+
+
+    #originalPrice {
+  color: rgba(255, 255, 255, 0.7); /* Lighter text color for original price */
+  font-size: 0.9rem; /* Subtle size for cut price */
+}
+
+#payAmount {
+  color: #ffffff; /* Final price has more emphasis */
+}
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100">
+  <!-- Navbar -->
+  <header class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-lg">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-3xl font-bold">Virtual Darshan</h1>
+      <nav>
+        <ul class="flex space-x-6">
+          <li><a href="booking.html" class="hover:text-yellow-300 transition duration-300">Home</a></li>
+          <li><a href="contact_us.html" class="hover:text-yellow-300 transition duration-300">Contact</a></li>
+          <li><a href="golden_temple.html" class="hover:text-yellow-300 transition duration-300">Jagannath Temple</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Booking Section -->
+  <section class="container mx-auto px-4 py-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Temple Info -->
+      <div class="bg-white rounded-lg shadow-lg p-6">
+        <img src="images/jagannath_puri.jpeg" alt="Vaishno Devi" class="w-full rounded-lg shadow-lg transition duration-500 ease-in-out transform hover:scale-105">
+        <h2 class="text-3xl font-semibold mt-4">Jagannath Puri Virtual Darshan</h2>
+        <p class="text-gray-700 mt-2">Experience the divine majesty of Jagannath Puri from the comfort of your home. Virtual darshan brings the revered shrine closer to you, bridging the distance between devotion and divinity.
+
+          Imagine standing on the sacred shores of the Bay of Bengal, feeling the gentle sea breeze carry the whispers of the divine. As you embark on this virtual journey, the majestic Jagannath Temple unfolds before you, its towering spires and intricate architecture shining with a divine light.
+          
+          With every step, the sacred presence of Lord Jagannath, Lord Balabhadra, and Goddess Subhadra envelops you, filling your heart with peace, tranquility, and spiritual awakening. The virtual darshan experience allows you to:
+          
+          Witness the breathtaking beauty of the Ratha Yatra
+          Offer prayers and worship from the comfort of your home
+          Participate in live aartis and poojas
+          Receive divine blessings and vibrations from the sacred shrine
+
+        <ul class="mt-4 text-gray-600">
+          <li><strong>Location:</strong> Jagannath Puri , Odissa</li>
+          <li><strong>Virtual Duration:</strong> 20 Minutes</li>
+          <div class="container mx-auto p-4">
+            <!-- Price per person highlight -->
+            <div class="text-center bg-yellow-100 text-yellow-800 font-bold text-lg py-2 px-4 rounded-lg mb-4 shadow-md">
+              ₹250 Per Person
+            </div>
+        </ul>
+      </div>
+
+      <!-- Booking Form -->
+      <div class="bg-white shadow-lg rounded-lg p-6">
+        <h3 class="text-xl font-semibold mb-4">Book Your Darshan</h3>
+        <form id="bookingForm">
+          <div class="form-element mb-4">
+            <label for="name" class="block text-gray-700 font-medium">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" class="w-full input-animated" required>
+          </div>
+          <div class="form-element mb-4">
+            <label for="email" class="block text-gray-700 font-medium">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" class="w-full input-animated" required>
+          </div>
+          <div class="form-element mb-4">
+            <label for="date" class="block text-gray-700 font-medium">Select Date</label>
+            <input type="date" id="date" name="date" class="w-full input-animated" required>
+          </div>
+          <div class="form-element mb-4">
+            <label for="time" class="block text-gray-700 font-medium">Select Timing</label>
+            <div class="flex justify-between mt-2 space-x-2">
+              <button type="button" class="time-slot py-2 px-4 rounded-lg" data-time="6:00 AM">6:00 AM</button>
+              <button type="button" class="time-slot py-2 px-4 rounded-lg" data-time="9:00 AM">9:00 AM</button>
+              <button type="button" class="time-slot py-2 px-4 rounded-lg" data-time="12:00 PM">12:00 PM</button>
+              <button type="button" class="time-slot py-2 px-4 rounded-lg" data-time="3:00 PM">3:00 PM</button>
+              <button type="button" class="time-slot py-2 px-4 rounded-lg" data-time="6:00 PM">6:00 PM</button>
+            </div>
+          </div>
+
+          <!-- Number of Persons -->
+          <div class="form-element mb-4">
+            <label for="persons" class="block text-gray-700 font-medium">Number of Pilgrims</label>
+            <select id="persons" name="persons" class="w-full input-animated">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+
+         
+          <div class="container mx-auto p-4">
+            <!-- Enter Your Address Section -->
+            <div class="address-section mb-6">
+              <label for="address" class="block text-lg font-semibold mb-2">Enter Your Address</label>
+              <textarea
+                id="address"
+                class="w-full p-3 border border-gray-300 rounded-lg"
+                placeholder="Enter your full address here..."
+                rows="3"
+              ></textarea>
+            </div>
+
+
+          <!-- Coupons Section -->
+          <div id="coupons" class="form-element mb-4">
+            <h4 class="text-lg font-semibold text-gray-700">Available Coupons</h4>
+            <div class="grid grid-cols-2 gap-4 mt-2">
+              <div class="coupon" data-discount="10" data-min="4">VIRTUALDARSHAN10 <br> 10% Off (Min: 4 Pilgrims)</div>
+              <div class="coupon" data-discount="15" data-min="5">VIRTUALDARSHAN15 <br> 15% Off (Min: 5 Pilgrims)</div>
+              <div class="coupon" data-discount="18" data-min="7">VIRTUALDARSHAN18 <br> 18% Off (Min: 7 Pilgrims)</div>
+              <div class="coupon" data-discount="20" data-min="10">VIRTUALDARSHAN20 <br> 20% Off (Min: 10 Pilgrims)</div>
+            </div>
+          </div>
+
+
+          <button
+          type="button"
+          id="payButton"
+          class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-3 px-10 rounded-lg hover:from-blue-600 hover:to-indigo-700 transition duration-300 flex items-center justify-center mx-auto space-x-4 w-full max-w-lg"
+        >
+          <span class="text-lg font-semibold">Proceed to Pay</span>
+          <span class="flex items-center space-x-2">
+            <span id="originalPrice" class="line-through text-3xl opacity-100 text-red-300">₹250</span>
+            <span id="payAmount" class="text-xl font-bold">₹200</span>  <!-- Reduced font size -->
+          </span>
+        </button>
+        
+        
+        
+        <script>
+        const personsInput = document.getElementById("persons");
+        const coupons = document.querySelectorAll(".coupon");
+        const payButton = document.getElementById("payButton");
+        const payAmountEl = document.getElementById("payAmount");
+        const originalPriceEl = document.getElementById("originalPrice");
+        
+        // Base price per person
+        let basePrice = 250;
+        payAmountEl.textContent = `₹${basePrice}`;
+        
+        // Function to update the button with prices
+        const updatePrice = (persons, discount = 0) => {
+          const totalPrice = basePrice * persons;
+          const discountedPrice = totalPrice - Math.floor(totalPrice * (discount / 100));
+        
+          // Hide or show the original price based on the number of persons
+          if (persons > 1 && discount > 0) {
+            originalPriceEl.classList.remove("hidden"); // Show original price if more than 1 person and discount
+            originalPriceEl.textContent = `₹${totalPrice}`; // Update original price
+          } else {
+            originalPriceEl.classList.add("hidden"); // Hide original price for 1 person or no discount
+          }
+        
+          // Update discounted/final price
+          payAmountEl.textContent = `₹${discount > 0 ? discountedPrice : totalPrice}`;
+        };
+        
+        // Coupon selection logic
+        coupons.forEach(coupon => {
+          coupon.addEventListener("click", () => {
+            const isSelected = coupon.classList.contains("selected");
+            const discount = parseInt(coupon.dataset.discount);
+            const minPersons = parseInt(coupon.dataset.min);
+            const persons = parseInt(personsInput.value);
+        
+            if (isSelected) {
+              // Deselect coupon and restore original price
+              coupon.classList.remove("selected");
+              updatePrice(persons);
+            } else if (persons >= minPersons) {
+              // Select coupon and apply discount
+              coupons.forEach(c => c.classList.remove("selected")); // Deselect all coupons
+              coupon.classList.add("selected");
+              updatePrice(persons, discount);
+            } else {
+              alert(`This coupon requires a minimum of ${minPersons} pilgrims.`);
+            }
+          });
+        });
+        
+        // Update price on person input change
+        personsInput.addEventListener("change", () => {
+          const persons = parseInt(personsInput.value);
+          coupons.forEach(c => c.classList.remove("selected")); // Deselect all coupons
+          updatePrice(persons);
+        });
+        
+        // Initial price check for default number of persons
+        const initialPersons = parseInt(personsInput.value);
+        updatePrice(initialPersons);
+        
+        // Redirect when "Proceed to Pay" button is clicked
+        payButton.addEventListener("click", () => {
+          const finalPrice = payAmountEl.textContent.replace('₹', ''); // Remove ₹
+          const redirectUrl = `/checkout?price=${finalPrice}`; // Example redirect URL
+          window.location.href = redirectUrl;
+        });
+        </script>
+  
+</body>
+
+</html>

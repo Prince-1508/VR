@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Make a Spiritual Donation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-purple-600 to-indigo-800 text-white min-h-screen flex flex-col items-center">
+
+  <!-- Header Section -->
+  <header class="text-center py-10">
+    <h1 class="text-4xl sm:text-6xl font-bold mb-4 animate-pulse">Make A Spiritual Donation</h1>
+    <p class="text-lg sm:text-xl font-light">
+      "Your small act of kindness can light up someone's life. Together, let's spread hope and positivity."
+    </p>
+  </header>
+
+  <!-- Donation Form Section -->
+  <div class="bg-white text-gray-800 w-11/12 sm:w-2/3 lg:w-1/2 p-8 rounded-lg shadow-xl transform hover:scale-105 transition duration-500">
+    <h2 class="text-2xl sm:text-3xl font-semibold text-center mb-6">Contribute to a Better Tomorrow</h2>
+    <form action="#" method="POST" class="space-y-6">
+      <!-- Name -->
+      <div>
+        <label for="name" class="block text-sm font-medium">Your Name</label>
+        <input type="text" id="name" name="name" 
+               class="w-full mt-1 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500" 
+               placeholder="Enter your full name" required>
+      </div>
+      <!-- Email -->
+      <div>
+        <label for="email" class="block text-sm font-medium">Email Address</label>
+        <input type="email" id="email" name="email" 
+               class="w-full mt-1 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500" 
+               placeholder="Enter your email address" required>
+      </div>
+      <!-- Donation Amount -->
+      <div>
+        <label for="amount" class="block text-sm font-medium">Donation Amount</label>
+        <select id="amount" name="amount" 
+                class="w-full mt-1 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500">
+          <option value="500">₹500</option>
+          <option value="1000">₹1000</option>
+          <option value="5000">₹5000</option>
+          <option value="custom">Custom Amount</option>
+        </select>
+      </div>
+      <!-- Custom Amount -->
+      <div id="customAmountField" class="hidden">
+        <label for="customAmount" class="block text-sm font-medium">Enter Custom Amount (₹)</label>
+        <input type="number" id="customAmount" name="customAmount" 
+               class="w-full mt-1 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500" 
+               placeholder="Enter custom amount" min="1">
+      </div>
+      <!-- Submit Button -->
+      <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+        Donate Now
+      </button>
+    </form>
+  </div>
+
+  <!-- Footer Section -->
+  <footer class="text-center mt-10">
+    <p class="text-lg font-light italic">
+      "The fragrance of flowers spreads only in the direction of the wind. But the goodness of a person spreads in all directions."
+    </p>
+    <p class="mt-4 text-sm">© 2025 Spiritual Foundation. All rights reserved.</p>
+  </footer>
+
+  <!-- Floating Animation -->
+  <div class="absolute top-0 right-0 left-0 bottom-0 -z-10 opacity-30">
+    <div class="absolute w-96 h-96 rounded-full bg-purple-400 top-20 left-10 animate-bounce-slow"></div>
+    <div class="absolute w-64 h-64 rounded-full bg-indigo-400 bottom-32 right-20 animate-bounce-slow"></div>
+    <div class="absolute w-80 h-80 rounded-full bg-pink-300 bottom-10 left-20 animate-bounce-slow"></div>
+  </div>
+
+  <!-- Tailwind Custom Animation -->
+  <style>
+    @keyframes bounce-slow {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+    .animate-bounce-slow {
+      animation: bounce-slow 6s infinite;
+    }
+  </style>
+
+  <!-- JavaScript for Dynamic Fields -->
+  <script>
+    const amountSelect = document.getElementById('amount');
+    const customAmountField = document.getElementById('customAmountField');
+
+    amountSelect.addEventListener('change', () => {
+      if (amountSelect.value === 'custom') {
+        customAmountField.classList.remove('hidden');
+      } else {
+        customAmountField.classList.add('hidden');
+      }
+    });
+  </script>
+</body>
+</html>

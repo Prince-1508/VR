@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Virtual Darshan</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="booking.html">Book Now</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="booking-form">
+    <h1 id="temple-name">Booking for: </h1>
+    <form action="/submit-booking" method="post">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="date">Preferred Date:</label>
+      <input type="date" id="date" name="date" required>
+      <button type="submit">Confirm Booking</button>
+    </form>
+  </section>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const temple = urlParams.get('temple');
+    document.getElementById('temple-name').textContent = `Booking for: ${temple}`;
+  </script>
+</body>
+</html>
