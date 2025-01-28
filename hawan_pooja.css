@@ -1,0 +1,399 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Header */
+  header {
+    background: linear-gradient(to right, #1f003b, #2f0180);
+    padding: 20px;
+    color: white;
+    text-align: center;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 36px;
+  }
+  
+  header h2 {
+    margin: 0;
+    font-size: 22px;
+  }
+  
+  /* Navigation */
+  nav {
+    display: flex;
+    justify-content: center;
+    background: #000000;
+    padding: 10px;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #ffe4e1;
+  }
+  
+  /* Main Section */
+  .main {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 30px 10px;
+    padding: 20px;
+  }
+  
+  /* Image Slider */
+  .image-slider {
+    position: relative;
+    width: 60%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .image-slider img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .image-slider img.active {
+    opacity: 1;
+  }
+  
+  .image-slider .prev, .image-slider .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  .image-slider .prev {
+    left: 10px;
+  }
+  
+  .image-slider .next {
+    right: 10px;
+  }
+  
+  /* Text Box */
+  .text-box {
+    width: 35%;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+ 
+
+  /* Booking Section */
+.booking {
+    margin: 20px;
+    padding: 20px;
+    position: relative;  /* Allows for position adjustments */
+    left: 70px;       
+
+    max-width: 400%;
+    max-height: 500%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-self: flex-start; /* Align the section to the left */
+  }
+  
+  .booking select, .booking button {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .booking button {
+    background-color: #03a557;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .booking button:hover {
+    background-color: #04a73b;
+  }
+  
+  .booking select {
+    font-size: 16px;
+  }
+  
+
+  /* Footer */
+  footer {
+    background: linear-gradient(to right,);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+  }
+  
+
+  .booking-container {
+    display: flex; /* Aligns the two boxes side by side */
+    justify-content: space-between; /* Ensures space between booking and terms summary */
+    margin: 20px;
+  }
+
+
+
+  .booking-box, .terms-summary {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 18%;
+  }
+  
+  .price {
+    color: green;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .booking-box label, .terms-summary h3 {
+    font-weight: bold;
+  }
+  
+  .terms-summary ul {
+    padding-left: 20px;
+  }
+  
+  .terms-btn, .book-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .terms-btn:hover, .book-btn:hover {
+    background: #e64a19;
+  }
+  
+
+
+
+  /* Slot Container */
+.slot-container {
+    max-width: 800px; /* Adjust container width to fit all slots in a row */
+    margin: 0 auto;
+    text-align: left; /* Align content */
+  }
+  
+  label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: inline-block;
+  }
+  
+  label span {
+    color: red;
+  }
+  
+  .slots {
+    display: flex;
+    justify-content: space-between; /* Spread out slots evenly in one row */
+    gap: 20px; /* Add even spacing between slots */
+    margin: 15px 0;
+  }
+  
+  .slot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 170px; /* Medium-sized slots */
+    height: 70px; /* Slightly taller slots */
+    background-color: #03a557; /* Green for available */
+    color: white;
+    border-radius: 8px; /* Smooth corners */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 14px; /* Medium text size */
+  }
+  
+  .slot:hover {
+    background-color: #04a73b; /* Lighter green on hover */
+  }
+  
+  .slot-time {
+    font-size: 14px; /* Medium font size for time */
+    font-weight: bold;
+  }
+  
+  .slot-availability {
+    font-size: 13px; /* Medium font size for availability */
+  }
+  
+  .slot.selected {
+    background-color: #eaa221; /* Orange for selected */
+  }
+  
+  /* Legend Section */
+  .legend {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .legend-item {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Space between legend items */
+    font-size: 14px; /* Medium legend text */
+  }
+  
+  .legend-box {
+    width: 15px; /* Medium-sized legend box */
+    height: 15px;
+    border-radius: 4px;
+    margin-right: 8px;
+  }
+  
+  .legend-box.available {
+    background-color: #03a557;
+  }
+  
+  .legend-box.selected {
+    background-color: #eaa221;
+  }
+
+
+
+
+  /* Booking and Terms Container */
+.booking-container {
+    display: flex;
+    justify-content: center; /* Center align the boxes */
+    gap: 20px; /* Add space between the booking and terms boxes */
+    margin: 30px auto; /* Center the container vertically */
+    max-width: 80%; /* Limit the width of the container */
+}
+
+/* Booking Box */
+.booking-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 45%;
+}
+
+.booking-box select,
+.booking-box button {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Book Now Button */
+.booking-box button {
+    background-color: #03a557; /* Green background */
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.booking-box button:hover {
+    background-color: #028d43; /* Slightly darker green on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+/* Price Section */
+.price {
+    color: green;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Terms Summary */
+.terms-summary {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 45%;
+}
+
+.terms-summary h3 {
+    font-weight: bold;
+}
+
+.terms-summary ul {
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+.terms-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #ff5722;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.terms-btn:hover {
+    background: #e64a19;
+    transform: scale(1.05);
+}
+
+/* Centered Footer */
+footer {
+    background: #1f003b;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+}

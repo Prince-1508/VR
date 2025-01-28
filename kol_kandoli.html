@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kol Kandoli Temple</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom, #1e3c72, #2a5298);
+            color: #fff;
+        }
+
+        header {
+            text-align: center;
+            padding: 100px 20px;
+            background: rgba(0, 0, 0, 0.5);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        header h1 {
+            font-size: 4rem;
+            margin: 0;
+            text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        header p {
+            font-size: 1.5rem;
+            margin: 10px 0 0;
+        }
+
+        nav {
+            background: rgba(0, 0, 0, 0.8);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 10px 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffd700;
+        }
+
+        main {
+            padding: 40px 20px;
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        section {
+            margin: 40px auto;
+            max-width: 1200px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            animation: slideIn 1.5s ease-in-out;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #1e3c72;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .gallery img {
+            max-width: 300px;
+            margin: 10px;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+        }
+
+        /* Sparkle Effect */
+        .sparkle {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .sparkle span {
+            position: absolute;
+            background: #fff;
+            border-radius: 50%;
+            animation: sparkle 1.5s infinite;
+        }
+
+        @keyframes sparkle {
+            0% {
+                transform: scale(0) translate(0, 0);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(2) translate(10px, 10px);
+                opacity: 0.5;
+            }
+            100% {
+                transform: scale(0) translate(0, 0);
+                opacity: 0;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Kol Kandoli Temple</h1>
+        <p>A Divine Destination in Jammu and Kashmir</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="vaishnodevi.html">Home</a></li>
+            <li><a href="#history">History</a></li>
+            <li><a href="#significance">Significance</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#visit">Visit Info</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="about">
+            <h2>About Kol Kandoli Temple</h2>
+            <p>Located in Jammu and Kashmir, Kol Kandoli Temple is a revered shrine dedicated to Goddess Durga. It is a part of the Nav Durga pilgrimage circuit and attracts devotees from across the country.
+                The temple is located approximately 18.6 km from Jammu Railway Station and 14.5 km from Jammu Airport.
+
+                Dedicated to Mata Vaishno Devi, the temple features the Goddess in the form of a pindi. It is traditionally recommended to visit this temple before embarking on the pilgrimage to the Vaishno Devi shrine.
+
+                The name of the temple comes from the words "Kaul-Kandoli." "Kol" means bowl, and "Kandoli" refers to marbles.
+            </p>
+        </section>
+
+        <section id="history">
+            <h2>History</h2>
+            <p>The temple holds ancient significance as the starting point of the Nav Durga Yatra. According to legends, it was established as a mark of Goddess Durga's first manifestation.
+                In the Mahabharata era, during the Pandavas' exile (Agyat Vaas), they learned of the Goddess in Nagraj village. They visited her shrine, praying for the end of their exile and the recovery of their kingdom. The Goddess appeared to them and instructed them to construct a temple in her honor. This temple was built in a single night but took six months to complete.
+
+                Within the temple grounds, there is a well known as the "Mother's Well." Devotees feel a sense of peace and relaxation after drinking its water, and it is believed to purify the body when sprinkled over the skin.
+
+                The temple's calming atmosphere helps soothe both the body and mind. It is said that the flowers offered to the Goddess here undergo a special process and transform into Bhasm (Babooti), which is believed to cure skin ailments when consumed or applied to affected areas.
+            </p>
+        </section>
+
+        <section id="significance">
+            <h2>Spiritual Significance</h2>
+            <p>The temple symbolizes the divine energy of the Goddess and provides spiritual solace to visitors. It is believed that praying here fulfills wishes and brings peace.
+                According to local legend, Mata Vaishno Devi manifested here at the age of 5 as a little girl and meditated for 12 years. After completing her penance, she settled in the form of a pindi at this temple. It is believed that the Goddess herself appears in the form of this natural pindi, granting the wishes of her devotees.
+
+                During her penance, the Goddess played marbles and swung with local girls in the area. She also performed several havans (rituals) for world peace. It is said that Mahamaya presented silver bowls to the temple on four occasions, each time offering 36 different types of food to 330 million deities.
+            </p>
+        </section>
+
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <img src="kol_kandoli1.jpg" alt="Kol Kandoli Temple Image 1">
+                <img src="kol_kandoli2.jpg" alt="Kol Kandoli Temple Image 2">
+                <img src="kol_kandoli3.jpg" alt="Kol Kandoli Temple Image 3">
+            </div>
+        </section>
+
+        <section id="visit">
+            <h2>Visitor Information</h2>
+            <p><strong>Timings:</strong> 6:00 AM - 8:00 PM</p>
+            <p><strong>Location:</strong> Nagrota, Jammu, Jammu and Kashmir</p>
+            <p><strong>Best Time to Visit:</strong> March to October</p>
+        </section>
+
+        <!-- Photo card with sparkling effect -->
+        <section id="photo-card">
+            <div class="card-container">
+                <div class="photo-card">
+                    <div class="image-container">
+                        <img src="kol_kandoli1.jpg" alt="Kol Kandoli Temple">
+                    </div>

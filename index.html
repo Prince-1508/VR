@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Virtual Darshan - Experience Divine Virtually</title>
+  <meta name="description" content="Experience Virtual Darshan with immersive VR technology. Explore temples, rituals, and receive blessings from the comfort of your home.">
+  <meta name="keywords" content="Virtual Darshan, VR temples, Online Puja, Immersive spirituality">
+  <meta name="author" content="Prince Srivastava">
+
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <header class="navbar">
+    <div id="splash-screen" class="splash">
+      <img src="images/logo_2.png" alt="Virtual Darshan Screen" class="splash-logo">
+    </div>
+    
+
+    <div class="header-content">
+      <div class="logo">
+        <img src="images/logo_2.png" alt="Virtual Daxrshan Logo" class="header-logo">
+      </div>
+
+
+    <nav>
+      <ul id="navlinks">
+        <li><a href="booking.html" class="square-button red-button">Book Now</a></li>
+      <li><a href="temple.html" class="square-button">Temples</a></li>
+      <li><a href="contact_us.html" class="square-button">Contact</a></li>
+      <li><a href="Shop_Index.html" class="square-button">Pooja Store</a></li>
+      <li><a href="login.html" class="square-button green-button">Login / Register</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Feel the Divine, Virtually</h1>
+      <p>Experience the serene atmosphere of Vaishno Devi and other iconic temples right from your home.</p>
+      <button onclick="location.href='booking.html'">Book Your Experience</button>
+
+    </div>
+  </section>
+
+
+  <!-- Sticky Donate Now Button -->
+<div class="fixed bottom-6 right-6 z-50">
+  <button
+    onclick="window.open('donation.html', '_blank')"
+    class="bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transition transform hover:scale-110"
+  >
+    Make A Spiritual Donation Now
+  </button>
+</div>
+
+
+ 
+  <!-- Carousel Section -->
+  <section class="carousel-section">
+    <h1>Explore Temples</h1>
+    <div class="carousel-container">
+      <div class="carousel">
+        <!-- Temple Cards -->
+        <div class="carousel-item" onclick="redirectTo('vaishnodevi.html')">
+          <img src="images/vaishno_devi_image.jpg" alt="Vaishno Devi Temple">
+          <h3>Vaishno Devi</h3>
+        </div>
+        <div class="carousel-item" onclick="redirectTo('tirupati.html')">
+          <img src="images/tirupati_balaji.jpg" alt="Tirupati Balaji Temple">
+          <h3>Tirupati Balaji</h3>
+        </div>
+        <div class="carousel-item" onclick="redirectTo('kedarnath.html')">
+          <img src="images/kedarnath1.jpg" alt="Kedarnath Temple">
+          <h3>Kedarnath</h3>
+        </div>
+        <div class="carousel-item" onclick="redirectTo('golden_temple.html')">
+          <img src="images/golden_temple.jpeg" alt="Golden Temple">
+          <h3>Golden Temple</h3>
+        </div>
+        <div class="carousel-item" onclick="redirectTo('jagannath_puri.html')">
+          <img src="images/jagannath_puri.jpeg" alt="Jagannath Temple">
+          <h3>Jagannath Puri</h3>
+        </div>
+        <div class="carousel-item" onclick="redirectTo('Haridwar.html')">
+          <img src="images/haridwar.jpg" alt="Haridwar">
+          <h3>Haridwar</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+
+
+
+    <!-- Professional Box Section -->
+    <section class="professional-box">
+      <div class="text-content">
+        <h2>Virtual Darshans Through VR</h2>
+        <p>Step into a world of spirituality and experience the serenity of sacred temples from the comfort of your home. With cutting-edge Virtual Reality technology, we bring the divine to you, offering an unparalleled immersive experience. Feel connected to your faith like never before.</p>
+        <p>Join thousands of others who have embraced this new way of worship, and let us guide you on a spiritual journey beyond the ordinary.</p>
+        <button onclick="location.href='about.html'">Learn More</button>
+      </div>
+      <img src="images/VR1.png" alt="Virtual Reality Experience">
+    </section>
+
+
+   <!-- Cool Design and Animation Section -->
+<section class="experience-section">
+  <div class="experience-content">
+    <h2>Experience Spiritual Bliss Through VR</h2>
+    <p>Step into a realm where technology meets spirituality. Explore the divine aura of India's most sacred temples without leaving your home. With our state-of-the-art VR headsets, you can now feel spiritually connected, immersed in the serene environment of temples like never before.</p>
+    <button onclick="location.href='booking.html'" class="experience-button">Book Your Virtual Darshan</button>
+  
+  </div>
+  <div class="experience-visual">
+    <img src="images/experience2.jpeg" alt="Virtual Darshan Experience" class="animated-image">
+  </div>
+</section>
+
+
+<!-- Enhanced Experience Section -->
+<section class="w-full bg-gray-100 py-16 px-0">
+  <div class="text-center mb-12">
+    <h2 class="text-4xl font-extrabold text-blue-600 animate-bounce mb-6">Explore Divinity with Unparalleled Innovation</h2>
+    <p class="text-lg text-gray-700 animate-fadeIn mb-4">Discover a transformative way to connect with spirituality. Our advanced technology enables you to virtually visit temples in stunning detail, feel the sacredness of rituals, and immerse yourself in the melodious chants—an experience previously unimaginable.</p>
+    <p class="text-lg text-gray-700 animate-fadeIn mb-6">From ancient hymns reverberating through temple halls to the intricate carvings and sculptures, every detail is captured and delivered right to you.</p>
+    <div class="flex justify-center space-x-4">
+      <button class="bg-blue-500 text-white font-semibold py-2 px-4 rounded-md hover:bg-blue-700 transition" onclick="location.href='technology.html'">Learn About the Tech</button>
+      <button class="bg-orange-500 text-white font-semibold py-2 px-4 rounded-md hover:bg-orange-700 transition" onclick="location.href='user_reviews.html'">Hear From Devotees</button>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center px-4">
+    <div class="relative flex gap-4">
+      <img src="images/temple_ritual.jpeg" alt="Temple Rituals" class="rounded-lg shadow-lg w-full h-56 object-cover transform transition-transform duration-500 hover:scale-105">
+      <img src="images/temple_image.jpeg" alt="Virtual Temple Exploration" class="rounded-lg shadow-lg w-full h-56 object-cover transform transition-transform duration-500 hover:scale-105">
+      <img src="images/VR.jpeg" alt="Immersive VR" class="rounded-lg shadow-lg w-full h-56 object-cover transform transition-transform duration-500 hover:scale-105">
+    </div>
+     <!-- Word-by-word animated paragraph -->
+  <section class="w-full bg-gray-50 py-16 px-6">
+    <div class="text-center">
+      <p
+        class="text-yellow-600 font-semibold text-2xl word-animation"
+        data-text="Feel every vibration. Live the sanctity. Immerse yourself in Virtual Darshans and experience the divine like never before.">
+      </p>
+    </div>
+  </section>
+  </div>
+
+
+<!-- JavaScript for Animations -->
+<script>
+  // Word-by-word animation
+  const textElement = document.querySelector(".word-animation");
+  const textContent = textElement.getAttribute("data-text").split(" ");
+  let index = 0;
+  const interval = setInterval(() => {
+    if (index < textContent.length) {
+      textElement.textContent += textContent[index] + " ";
+      index++;
+    } else {
+      clearInterval(interval);
+    }
+  }, 300);
+</script>
+
+
+
+
+<!-- Testimonials Section -->
+<section class="w-full bg-white py-16 px-0">
+  <h2 class="text-4xl font-extrabold text-center text-gray-800 mb-12 animate-bounce">Listen From Our Devotees </h2>
+  <div class="flex justify-center items-center gap-8 overflow-x-auto px-4">
+    <div class="text-center animate-zoomIn">
+      <div class="w-32 h-32 mx-auto rounded-full bg-gradient-to-r from-blue-500 to-green-500 p-1">
+        <img src="images/SHRUTI.jpeg" alt="Priya, Chennai" class="w-full h-full object-cover rounded-full">
+      </div>
+      <p class="italic text-gray-600 mt-4">&ldquo;Virtual Darshan changed the way I connect with my faith. The immersive experience brought tears of joy!&rdquo;</p>
+      <h4 class="mt-2 font-semibold text-blue-600">- Shruti, Shimla</h4>
+    </div>
+    <div class="text-center animate-zoomIn">
+      <div class="w-32 h-32 mx-auto rounded-full bg-gradient-to-r from-purple-500 to-pink-500 p-1">
+        <img src="images/PRINCE.jpeg" alt="Sameer, Mumbai" class="w-full h-full object-cover rounded-full">
+      </div>
+      <p class="italic text-gray-600 mt-4">&ldquo;During difficult times, this gave my family a way to feel closer to our traditions. Thank you for making this possible.&rdquo;</p>
+      <h4 class="mt-2 font-semibold text-blue-600">- Prince, Mumbai</h4>
+    </div>
+    <div class="text-center animate-zoomIn">
+      <div class="w-32 h-32 mx-auto rounded-full bg-gradient-to-r from-yellow-500 to-red-500 p-1">
+        <img src="images/ADITYA..jpeg" alt="Anjali, New Delhi" class="w-full h-full object-cover rounded-full">
+      </div>
+      <p class="italic text-gray-600 mt-4">&ldquo;I could explore temples from all over India without traveling. It’s like being there for real!&rdquo;</p>
+      <h4 class="mt-2 font-semibold text-blue-600">- Aditya, New Delhi</h4>
+    </div>
+  </div>
+</section>
+
+
+<!-- /********ERROR OF BOOK YOUR VIRTUAL DARSHAN NOW BUTTON ******/ By Removing Below Code it can be fixed-->
+
+
+<!-- Exclusive Virtual Darshan Features Section -->
+<section class="relative bg-gradient-to-r from-blue-100 to-blue-300 py-16 px-6">
+  <div class="container mx-auto text-center">
+    <h2 class="text-4xl font-extrabold text-blue-900 mb-6 animate-fadeInDown">Step into the Divine Realm</h2>
+    <p class="text-lg text-gray-700 mb-8 animate-fadeIn">
+      With Virtual Reality, you don’t just see temples—you experience them. Feel the vibrations of chants, hear the sacred bells, and immerse yourself in the divine aura like never before.
+    </p>
+
+    <!-- Interactive Features -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+      <!-- Feature 1 -->
+      <div class="relative group hover:scale-105 transition transform duration-500">
+        <img src="images/temple_interior.jpeg" alt="Temple Interior" class="rounded-lg shadow-lg object-cover w-full h-56">
+        <div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center">
+          <p class="text-white font-semibold text-lg">Explore Intricate Temple Interiors</p>
+        </div>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="relative group hover:scale-105 transition transform duration-500">
+        <img src="images/divine_power.jpeg" alt="Live Chants" class="rounded-lg shadow-lg object-cover w-full h-56">
+        <div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center">
+          <p class="text-white font-semibold text-lg">Feel the Divine Power</p>
+        </div>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="relative group hover:scale-105 transition transform duration-500">
+        <img src="images/VR_Experience.jpeg" alt="VR Experience" class="rounded-lg shadow-lg object-cover w-full h-56">
+        <div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center">
+          <p class="text-white font-semibold text-lg">Immersive VR Rituals</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Interactive Highlights Section -->
+<section class="w-full bg-white py-16 px-6">
+  <div class="text-center mb-12">
+    <h2 class="text-3xl font-extrabold text-gray-800 mb-4 animate-bounce">Highlights of the Virtual Darshan Experience</h2>
+    <p class="text-lg text-gray-700">Elevate your spiritual journey with these cutting-edge features:</p>
+  </div>
+
+  <!-- Features with Animation -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="bg-gray-100 rounded-lg p-6 text-center hover:shadow-2xl transition duration-500">
+      <i class="fas fa-vr-cardboard text-blue-600 text-4xl mb-4 animate-spin"></i>
+      <h3 class="text-xl font-bold text-gray-800">360° Temple View</h3>
+      <p class="text-gray-600">Feel like you're walking through the temple with immersive 360° visuals.</p>
+    </div>
+    <div class="bg-gray-100 rounded-lg p-6 text-center hover:shadow-2xl transition duration-500">
+      <i class="fas fa-music text-green-600 text-4xl mb-4 animate-pulse"></i>
+      <h3 class="text-xl font-bold text-gray-800">Sacred Hymns & Chants</h3>
+      <p class="text-gray-600">Experience live aartis and chants with surround sound technology.</p>
+    </div>
+    <div class="bg-gray-100 rounded-lg p-6 text-center hover:shadow-2xl transition duration-500">
+      <i class="fas fa-praying-hands text-yellow-600 text-4xl mb-4 animate-bounce"></i>
+      <h3 class="text-xl font-bold text-gray-800">Interactive Blessings</h3>
+      <p class="text-gray-600">Get real-time blessings from priests directly in VR sessions.</p>
+    </div>
+    <div class="bg-gray-100 rounded-lg p-6 text-center hover:shadow-2xl transition duration-500">
+      <i class="fas fa-globe text-purple-600 text-4xl mb-4 animate-spin"></i>
+      <h3 class="text-xl font-bold text-gray-800">Global Access</h3>
+      <p class="text-gray-600">Visit iconic temples across India and the world from your living room.</p>
+    </div>
+    <div class="bg-gray-100 rounded-lg p-6 text-center hover:shadow-2xl transition duration-500">
+      <i class="fas fa-tv text-red-600 text-4xl mb-4 animate-pulse"></i>
+      <h3 class="text-xl font-bold text-gray-800">Multi-Device Support</h3>
+      <p class="text-gray-600">Seamless compatibility with VR headsets, smartphones, and TVs.</p>
+    </div>
+    <div class="bg-gray-100 rounded-lg p-6 text-center hover:shadow-2xl transition duration-500">
+      <i class="fas fa-heart text-pink-600 text-4xl mb-4 animate-bounce"></i>
+      <h3 class="text-xl font-bold text-gray-800">Personalized Devotion</h3>
+      <p class="text-gray-600">Customize your experience with favorite temples and rituals.</p>
+    </div>
+  </div>
+</section>
+
+<!-- /********ERROR OF BOOK YOUR VIRTUAL DARSHAN NOW BUTTON ******/ -->
+
+
+
+<section class="w-full bg-gradient-to-r from-green-100 to-green-300 py-16 px-6">
+  <div class="text-center mb-12">
+    <h2 class="text-4xl font-extrabold text-green-900 mb-6">Why Choose Virtual Darshan?</h2>
+    <p class="text-lg text-gray-700 mb-4">We combine faith and technology to provide an unparalleled spiritual experience.</p>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+      <h3 class="text-2xl font-bold text-green-700 mb-4">Convenience</h3>
+      <p class="text-gray-600">Access temples and rituals from anywhere in the world without travel.</p>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+      <h3 class="text-2xl font-bold text-green-700 mb-4">Immersive Technology</h3>
+      <p class="text-gray-600">Feel like you're physically present with our advanced VR systems.</p>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+      <h3 class="text-2xl font-bold text-green-700 mb-4">Eco-Friendly</h3>
+      <p class="text-gray-600">Reduce your carbon footprint by avoiding long-distance travel.</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<!-- Advanced Features Section -->
+<section class="w-full bg-gray-50 py-16 px-0">
+  <h2 class="text-3xl font-bold text-center text-gray-800 mb-8 animate-fadeInDown">Features that Set Us Apart</h2>
+  <ul class="text-lg text-gray-700 list-disc list-inside space-y-4 px-8">
+    <li><strong class="text-blue-600">Live Darshan:</strong> Attend live aarti sessions from temples across the globe.</li>
+    <li><strong class="text-blue-600">Interactive Guides:</strong> Learn the history, rituals, and significance of temples with voice and text guides.</li>
+    <li><strong class="text-blue-600">Real-Time Connections:</strong> Connect with temple priests for blessings in real-time via VR.</li>
+    <li><strong class="text-blue-600">Multi-Device Compatibility:</strong> Available on VR headsets, smartphones, and smart TVs.</li>
+    <li><strong class="text-blue-600">Accessibility for All:</strong> Designed for people of all abilities to experience the divine effortlessly.</li>
+  </ul>
+</section>
+
+
+
+
+
+<!-- Immersive Gallery -->
+<section class="w-full bg-gray-100 py-16 px-0">
+  <h2 class="text-3xl font-bold text-center text-gray-800 mb-8 animate-fadeIn">Gallery of Sacred Experiences</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 px-4">
+    <img src="images/pilgrims_image.jpeg" alt="Pilgrims Praying" class="rounded-lg shadow-lg transform transition-transform duration-500 hover:scale-105 w-full h-64 object-cover animate-slideInLeft">
+    <img src="images/temple_dome.jpeg" alt="Temple Dome" class="rounded-lg shadow-lg transform transition-transform duration-500 hover:scale-105 w-full h-64 object-cover animate-slideInDown">
+    <img src="images/prayer_lamps.jpeg" alt="Prayer Lamps" class="rounded-lg shadow-lg transform transition-transform duration-500 hover:scale-105 w-full h-64 object-cover animate-slideInUp">
+    <img src="images/haridwar.jpg" alt="Aarti Moment" class="rounded-lg shadow-lg transform transition-transform duration-500 hover:scale-105 w-full h-64 object-cover animate-slideInRight">
+  </div>
+</section>
+
+
+<!-- Call to Action -->
+<section class="w-full bg-blue-600 py-16 px-0 text-white text-center">
+  <h2 class="text-4xl font-extrabold mb-4">Begin Your Spiritual Journey Today</h2>
+  <p class="text-lg mb-8">Don’t wait to experience the blend of faith and technology. Join countless others who’ve embraced the Virtual Darshan.</p>
+  <button class="bg-yellow-400 text-blue-600 font-bold py-3 px-6 rounded-md shadow-md hover:bg-yellow-500 transition transform hover:scale-105" onclick="location.href='booking.html'">Book Now</button>
+</section>
+
+
+ <!-- Footer -->
+ <footer class="bg-gray-900 text-white py-8 mt-auto">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div>
+        <img src="images/logo_2.png" alt="Virtual Darshan Logo" class="h-16 w-auto mb-4">
+        <p class="text-sm">&copy; 2024 Virtual Darshan. All Rights Reserved.</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+        <ul class="space-y-2">
+          <li><a href="index.html" class="text-gray-300 hover:text-yellow-400">Home</a></li>
+          <li><a href="#" class="text-gray-300 hover:text-yellow-400">About Us</a></li>
+          <li><a href="contact_us.html" class="text-gray-300 hover:text-yellow-400">Contact</a></li>
+          <li><a href="#" class="text-gray-300 hover:text-yellow-400">Gallery</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Services</h3>
+        <ul class="space-y-2">
+          <li><a href="booking.html" class="text-gray-300 hover:text-yellow-400">Virtual Darshans</a></li>
+          <li><a href="temple.html" class="text-gray-300 hover:text-yellow-400">Virtual Tours</a></li>
+          <li><a href="#" class="text-gray-300 hover:text-yellow-400">Reviews</a></li>
+          <li><a href="donation.html" class="text-gray-300 hover:text-yellow-400">Donation Services</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="text-gray-300 hover:text-yellow-400">Facebook</a></li>
+          <li><a href="#" class="text-gray-300 hover:text-yellow-400">Twitter</a></li>
+          <li><a href="#" class="text-gray-300 hover:text-yellow-400">Instagram</a></li>
+          <li><a href="#" class="text-gray-300 hover:text-yellow-400">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-gray-700 mt-8 pt-4 text-center">
+      <p class="text-sm">
+        <a href="#" class="text-gray-300 hover:text-yellow-400">Privacy Policy</a> |
+        <a href="#" class="text-gray-300 hover:text-yellow-400">Terms of Service</a> |
+        <a href="#" class="text-gray-300 hover:text-yellow-400">Help</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>

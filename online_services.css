@@ -1,0 +1,463 @@
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: rgb(255, 250, 250);
+    color: #333;
+}
+
+/* Header Styling */
+.header {
+    background: #08012f;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 20px 20px; /* Increased padding for more height */
+    position: relative;
+    height: 80px; /* Optionally set a fixed height */
+}
+
+
+.header-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+}
+
+.logo {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    background: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    left: 20px;
+}
+
+.header-text {
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.header p {
+    margin: 5px 0 0;
+    font-size: 1.2rem;
+}
+
+
+/* Footer */
+.footer {
+    background: #08012f;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: relative; /* Ensure footer is part of the normal flow */
+    width: 100%;
+    bottom: 0;
+    margin-top: 20px; /* Adds some spacing above the footer */
+}
+
+/* Add bottom padding to content */
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Dynamic grid with 3 columns */
+    gap: 20px; /* Space between cards */
+    justify-content: center; /* Center the grid */
+    padding: 50px 0 80px; /* Padding to avoid overlap with footer */
+    margin: 20px auto; /* Center grid horizontally */
+    width: 80%; /* Limit grid width */
+}
+
+.services > *:nth-last-child(2):nth-child(odd),
+.services > *:nth-last-child(1):nth-child(odd) {
+    grid-column: 2; /* Place the card in the center column */
+}
+
+
+
+.services::after {
+    content: ""; /* Placeholder to fill the space for centering */
+    display: block;
+    grid-column: span 3; /* Ensures centering of last row */
+}
+
+/* Ensure slideshow and other content don't interfere with footer */
+.slideshow {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 80px; /* Ensure there's space for the footer */
+}
+
+
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%; /* Full width inside the grid column */
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.4s;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #ffcc00 20%, #ffe680 80%);
+}
+/* Adding a glowing effect on the edges of the cards */
+.card::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 15px;
+    background: linear-gradient(45deg, rgba(255, 215, 0, 0.5), rgba(255, 165, 0, 0.5));
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+
+@keyframes edge-glow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.card img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 150px;
+    object-fit: cover;
+}
+.card h2 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #800000;
+    transition: color 0.3s;
+}
+
+.card:hover h2 {
+    color: #b30000;
+}
+
+
+
+.card p {
+    padding: 15px;
+    font-size: 1rem;
+    color: #555;
+}
+
+.card img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 150px;
+    object-fit: cover;
+}
+
+
+/* Optional: Animated border glow on hover */
+.card::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 15px;
+    background: linear-gradient(45deg, rgba(255, 215, 0, 0.5), rgba(255, 165, 0, 0.5));
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+
+/* Devotee Details Section */
+.devotee-details {
+    background: #fff;
+    margin: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.details-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.detail {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.detail .icon {
+    font-size: 1.5rem;
+    color: #800000;
+}
+
+.update-button button {
+    padding: 10px 15px;
+    background: #800000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.update-button button:hover {
+    background: #a00000;
+}
+
+/* Navigation Bar */
+.navigation {
+    display: flex;
+    gap: 15px;
+    position: absolute;
+    right: 20px;
+}
+
+.nav-button {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 25px;
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+}
+
+.nav-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #ffcc00, #ffa500);
+    z-index: 1;
+    transition: width 0.4s ease-in-out;
+}
+
+.nav-button:hover::before {
+    width: 100%;
+}
+
+.nav-button:hover {
+    color: black;
+    border-color: #ffa500;
+}
+
+.nav-button span {
+    position: relative;
+    z-index: 2;
+}
+
+.nav-button:hover span {
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+
+/*.slideshow {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}*/
+
+.slideshow-container {
+    width: 200%; /* Adjust to control image width */
+    height: auto;
+    position: relative;
+}
+
+.slide {
+    width: 100%;
+    height: 200px; /* Smaller height */
+    border-radius: 10px;
+    object-fit: cover;
+    display: none;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+    display: block;
+}
+
+
+
+.card .book-now-btn {
+    display: inline-block;
+    background: linear-gradient(45deg, #28a745, #218838);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 10px auto;
+    transition: transform 0.3s, background 0.3s, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.card .book-now-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: left 0.4s ease-in-out;
+    z-index: 1;
+}
+
+.card .book-now-btn:hover::before {
+    left: 100%;
+}
+
+.card .book-now-btn:hover {
+    background: linear-gradient(45deg, #218838, #1e7e34);
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.card .book-now-btn:active {
+    transform: scale(1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Sparkle effect */
+.card .book-now-btn span {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+}
+
+.card .book-now-btn::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    opacity: 0;
+    border-radius: 50%;
+    animation: sparkle 1s infinite;
+}
+
+@keyframes sparkle {
+    0% {
+        transform: scale(0) translate(-50%, -50%);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.5) translate(-50%, -50%);
+        opacity: 0;
+    }
+}
+
+
+
+
+.book-now-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff; /* Button color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.book-now-btn:hover {
+    background-color: #0056b3; /* Darker on hover */
+}
+
+
+
+
+/* Sub-header styles */
+.sub-header {
+    background-color: #343a40;
+    padding: 10px 0;
+}
+
+.sub-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.sub-navigation a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sub-navigation a:hover {
+    background-color: #495057;
+    border-radius: 5px;
+    color: #ffc107;
+}
+
+.sub-navigation .active {
+    font-weight: bold;
+    color: #ffc107;
+}
+
+
+

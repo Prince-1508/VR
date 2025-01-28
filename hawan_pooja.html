@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hawan Poojan</title>
+  <link rel="stylesheet" href="hawan_pooja.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <h1>Shri Mata Vaishno Devi</h1>
+    <h2>Hawan Poojan</h2>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="online_services.html">Home</a>
+    <a href="#">About</a>
+    <a href="contact_us.html">Contact</a>
+    <a href="online_services.html">Online Services</a>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main">
+    <!-- Image Slider -->
+    <div class="image-slider">
+      <img src="images/YagyaShala_1.png" alt="Image 1" class="active">
+      <img src="images/YagyaShala_3.png" alt="Image 2">
+      <img src="images/hawan_pooja.webp" alt="Image 3">
+      <button class="prev">❮</button>
+      <button class="next">❯</button>
+    </div>
+
+    <!-- Description Box -->
+    <div class="text-box">
+      <h3>About Hawan Poojan</h3>
+      <p>
+        The Hawan Poojan at Vaishno Devi is one of the most revered and spiritually significant rituals performed at the holy shrine of Mata Vaishno Devi in Katra, Jammu and Kashmir. This sacred fire ritual, known for its deep spiritual and purifying effects, holds great significance for the devotees who embark on the pilgrimage to seek divine blessings from the Goddess. The Hawan Poojan symbolizes a connection between the material world and the divine through the medium of fire (Agni), which is considered a messenger that carries offerings and prayers to the gods.
+
+The ritual is an integral part of the worship and devotion experienced by millions of pilgrims visiting the Vaishno Devi temple. According to Hindu traditions, Hawan or Homa is a form of Vedic fire worship in which offerings such as ghee, grains, herbs, and other sacred items are poured into a consecrated fire while chanting mantras. The sacred fire symbolizes the Goddess’s divine energy, and through the process, devotees express their devotion, gratitude, and request for blessings. The flames of the fire are believed to purify the surroundings and the minds of the participants, cleansing them of negativity, impurities, and obstacles in life.
+      </p>
+    </div>
+  </main>
+
+  <!-- Booking and Terms Section -->
+  <section class="booking-container">
+    <!-- Booking Box -->
+    <div class="booking-box">
+      <h3>Hawan Poojan Booking</h3>
+      <form id="booking-form">
+        <!-- Mode Selection -->
+        <label for="pooja-mode">Pooja Mode:</label>
+        <select id="pooja-mode">
+          <option value="in-person">In Person</option>
+          <option value="in-absence">In Absence</option>
+        </select>
+
+        <!-- Number of Persons (Visible only for In Person mode) -->
+        <div id="persons-section">
+          <label for="number-of-persons">Number of Persons:</label>
+          <select id="number-of-persons">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+
+        <!-- Price Section -->
+        <div class="price">
+          <p>In Person Price: <strong>₹11,000</strong></p>
+          <p>In Absence Price: <strong>₹2,100</strong></p>
+        </div>
+
+        <a href="https://online.maavaishnodevi.org/#/login">
+          <button type="button">Book Now</button>
+        </a>
+      </form>
+    </div>
+
+    <!-- Terms Summary Box -->
+    <div class="terms-summary">
+      <h3>Important Information</h3>
+      <ul>
+        <li>Tickets once booked cannot be canceled or refunded.</li>
+        <li>Original ID proof is required for in-person bookings.</li>
+        <li>For absence bookings, Prasad will be delivered to your address.</li>
+        <li>Children below 10 years can join for free (max 2 per ticket).</li>
+      </ul>
+      <button class="terms-btn" onclick="location.href='hawan_pooja_tnc.html';">View Full Terms and Conditions</button>
+    </div>
+  </section>
+
+  <!-- Slots Section -->
+  <div class="slot-container">
+    <label for="slot-select">Available Slots<span>*</span></label>
+    <div class="slots">
+      <div class="slot">
+        <div class="slot-time">09:00 AM - 10:00 AM</div>
+        <div class="slot-availability">Availability: </div>
+      </div>
+      <div class="slot">
+        <div class="slot-time">11:00 AM - 12:00 PM</div>
+        <div class="slot-availability">Availability: </div>
+      </div>
+      <div class="slot">
+        <div class="slot-time">01:00 PM - 02:00 PM</div>
+        <div class="slot-availability">Availability: </div>
+      </div>
+      <div class="slot">
+        <div class="slot-time">03:00 PM - 04:00 PM</div>
+        <div class="slot-availability">Availability: </div>
+      </div>
+    </div>
+    <div class="legend">
+      <div class="legend-item">
+        <div class="legend-box available"></div> Availability
+      </div>
+      <div class="legend-item">
+        <div class="legend-box selected"></div> Selected
+      </div>
+    </div>
+  </div>
+ <!-- Footer -->
+ <footer class="bg-gray-800 text-white py-4">
+  <div class="container mx-auto text-center">
+    <p>&copy; 2024 Virtual Darshan. All Rights Reserved.</p>
+  </div>
+</footer>
+ 
+</body>
+</html>

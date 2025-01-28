@@ -1,0 +1,444 @@
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(255, 250, 250);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+.header-container {
+  background-color: #050213;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.logo {
+  width: 50px;
+  vertical-align: middle;
+}
+
+.moving-text-container {
+  position: relative;
+  overflow: hidden;
+  height: 30px;
+  margin-top: 10px;
+}
+
+.moving-text {
+  white-space: nowrap;
+  display: inline-block;
+  animation: scroll-left 10s linear infinite;
+  font-size: 1.2rem;
+  color: #ff4500;
+  font-weight: bold;
+  font-size: 1.7rem; /* Increased font size */
+  font-weight: 1000; /* Made font very bold */
+}
+  
+.moving-text span {
+  margin-right: 100px; /* Adds spacing between texts */
+}
+
+/* Navigation Bar */
+.nav-bar {
+  background-color: #470404;
+  color: #fff;
+  padding: 10px 0;
+}
+
+.nav-bar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-bar li {
+  margin: 0 15px;
+}
+
+.nav-bar a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+
+.nav-bar a:hover {
+  color: #ff4500;
+}
+
+/* Booking Section */
+.booking-section {
+  padding: 20px;
+  text-align: center;
+  flex: 1;
+}
+
+.booking-title, .location-title {
+  font-size: 1.8rem;
+  color: #1b0334;
+  margin-bottom: 15px;
+  font-weight: 600;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.booking-options {
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 12px 25px;
+  margin: 8px;
+  background-color: #007BFF;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.dropdown {
+  padding: 10px;
+  font-size: 1rem;
+  width: 90%;
+  max-width: 300px;
+  margin: 0 auto 20px auto;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: border-color 0.2s ease;
+}
+
+.dropdown:focus {
+  border-color: #6b0101;
+  outline: none;
+}
+
+/* Card Grid Adjustments 
+.availability-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(33, 13, 122, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+*/
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/*.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}*/
+
+.card h4 {
+  margin: 15px 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Price Button Styling */
+.price-btn {
+  background-color: #4caf50;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 10px auto;
+  display: inline-block;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.price-btn:hover {
+  background-color: #45a049;
+  transform: scale(1.1);
+  /* box-shadow: #45a049; */
+}
+
+/* Footer */
+footer {
+  background: #012d3b;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: auto;
+}
+
+footer a {
+  color: #007BFF;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+footer a:hover {
+  color: #ff4500;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+.audio-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.audio-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+
+
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(33, 13, 122, 0.1);
+  text-align: center;
+  padding: 10px;
+  height: 300px; /* Fixed height for uniformity */
+  width: 250px; /* Fixed width for uniformity */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden; /* Prevent overflow issues */
+}
+
+
+/* Ensure cards have uniform size and alignment */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(33, 13, 122, 0.1);
+  text-align: center;
+  padding: 10px;
+  height: 300px; /* Fixed height for uniformity */
+  width: 250px; /* Fixed width for uniformity */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden; /* Prevent overflow issues */
+}
+
+.card img {
+  max-width: 100%; /* Ensure images scale within card */
+  max-height: 150px; /* Maintain consistent image height */
+  object-fit: cover; /* Crop images to fit */
+  border-radius: 10px 10px 0 0;
+}
+
+.availability-container {
+  display: flex; /* Flexbox for better alignment */
+  flex-wrap: wrap; /* Wrap cards to next row if needed */
+  justify-content: center; /* Center align cards */
+  gap: 20px; /* Consistent spacing between cards */
+}
+
+/* Styling for unavailable messages */
+.no-availability-message {
+  font-size: 1.5rem;
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0;
+}
+
+
+
+
+/* Fullscreen splash screen */
+.splash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f9f6ec; /* Light beige background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: holdScreen 5s ease forwards; /* Keep the splash screen for 5 seconds */
+}
+
+/* Logo styling with animation */
+.splash-logo {
+  width: 200px; /* Adjust size of the logo */
+  height: auto;
+  animation: zoomInGlow 3s ease forwards; /* Cool zoom-in glow animation */
+}
+
+/* Zoom-in with glow effect */
+@keyframes zoomInGlow {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+    filter: brightness(0.5);
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+    filter: brightness(1.5);
+  }
+  100% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+}
+
+/* Hold the screen for 5 seconds */
+@keyframes holdScreen {
+  0%, 80% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+
+header {
+  padding: 20px;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+}
+
+
+
+
+.card img {
+  width: 130%; /* Full width of the card */
+  height: auto; /* Allow the image to scale proportionally */
+  object-fit: cover; /* Crop the image to fill the area */
+  border-radius: 10px 10px 0 0; /* Match the card's top corners */
+}
+
+.price-box {
+  background-color: #00aa41; /* Green background */
+  color: white; /* White text */
+  font-size: 1rem; /* Font size */
+  font-weight: bold; /* Bold font */
+  text-align: center; /* Center-align text */
+  padding: 10px 0; /* Vertical padding */
+  width: 110%; /* Full width of the card */
+  box-sizing: border-box; /* Include padding in the width */
+  border-radius: 0; /* No rounded edges */
+  margin: 0; /* Remove any external spacing */
+}
+
+
+.book-now-btn {
+  background-color: rgb(48, 5, 98); /* Red background */
+  color: white; /* White text */
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 0 0 10px 10px; /* Match card's bottom corners */
+  cursor: pointer;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+  transition: transform 0.3s ease, background-color 0.4s ease;
+}
+
+.book-now-btn:hover {
+  background-color: rgb(5, 143, 72); /* Darker shade of red on hover */
+  transform: translateY(-3px); /* Slight upward movement */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

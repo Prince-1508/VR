@@ -1,0 +1,365 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+   /* background-image: url('images/background.jpeg'); /* Initial background image */
+    background-size: cover;
+    background-position: center;
+    animation: backgroundImage 15s linear infinite; /* Animation for moving the background */
+  }
+  
+  /* Keyframes for background image animation */
+  @keyframes backgroundImage {
+    0% {
+      background-position: center;
+    }
+    50% {
+      background-position: top left; /* Moves background to top-left */
+    }
+    100% {
+      background-position: center; /* Returns back to center */
+    }
+  }
+  
+  /* Header Styles */
+  header.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: rgba(29, 4, 80, 0.8); /* Semi-transparent for better readability */
+    color: white;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  header .logo img {
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  header nav ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  header nav ul li {
+    margin: 0 15px;
+  }
+  
+  header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  header nav ul li a:hover {
+    color: #ffcc00;
+  }
+  
+  .hero {
+    background: url('images/vaishno-devi.jpeg') no-repeat center center;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+    background-size: cover; /* Ensures the image scales proportionally to cover the section */
+    animation: backgroundImage 20s linear infinite; /* Smooth scrolling effect */
+    background-attachment: fixed; /* Creates a parallax effect */
+    height: 60vh; /* Sets the height of the section to fill the entire viewport */
+    display: flex; /* Aligns content in the center */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+  /* Sections */
+  section {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .about img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+  
+  .weather {
+    background: #f0f8ff;
+    padding: 50px;
+  }
+  
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+  }
+  
+  .image-grid img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    background: #282828;
+    color: white;
+    padding: 20px;
+  }
+  
+  /* Header Styles */
+  .navbar {
+    position: fixed;
+    display: flex;
+    top: 0; /* Position it at the top of the viewport */
+    left: 0; /* Align with the left edge */
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    z-index: 1000; /* Keeps it above other elements */
+    width: auto;
+    background: linear-gradient(90deg, #2c3e50, #4ca1af); /* Elegant gradient */
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+
+  
+  .navbar .logo span {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #ffd700; /* Golden for divine feel */
+  }
+  
+  .navbar nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar nav ul li {
+    margin: 0 15px;
+  }
+  
+  .navbar nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 8px;
+    background: linear-gradient(145deg, #1e1e1e, #444); /* Subtle gradient */
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4), -3px -3px 6px rgba(255, 255, 255, 0.1); /* Neumorphism effect */
+    transition: all 0.3s ease;
+  }
+  
+  .navbar nav ul li a:hover {
+    background: #ffd700; /* Golden hover */
+    color: black;
+    transform: scale(1.1); /* Slight zoom-in effect */
+    box-shadow: 0 0 12px #ffd700, 0 0 24px #ffd700; /* Glowing effect */
+  }
+  
+  /* Active link style */
+  .navbar nav ul li a.active {
+    background: #ffd700;
+    color: black;
+    font-weight: bold;
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.2), inset -2px -2px 4px rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Gallery Section */
+.gallery {
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .gallery h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ensures responsive grid */
+    gap: 15px; /* Adds space between images */
+    justify-items: center; /* Centers images within each grid cell */
+    align-items: center; /* Vertically aligns images */
+  }
+  
+  .image-grid img {
+    width: 100%;
+    height: 250px; /* Fixed height for consistent image sizes */
+    object-fit: cover; /* Ensures images cover the area without distortion */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow to the images */
+  }
+  
+  /* Ensuring a good layout for responsive screens */
+  @media screen and (max-width: 768px) {
+    .image-grid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Smaller images on smaller screens */
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .image-grid {
+      grid-template-columns: 1fr; /* Single column layout on very small screens */
+    }
+  }
+  
+
+  
+
+  /* Fullscreen splash screen */
+.splash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white; /* Light beige background  #f9f6ec */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: holdScreen 5s ease forwards; /* Keep the splash screen for 5 seconds */
+}
+
+/* Logo styling with animation */
+.splash-logo {
+  width: 200px; /* Adjust size of the logo */
+  height: auto;
+  animation: zoomInGlow 3s ease forwards; /* Cool zoom-in glow animation */
+}
+
+/* Zoom-in with glow effect */
+@keyframes zoomInGlow {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+    filter: brightness(0.5);
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+    filter: brightness(1.5);
+  }
+  100% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+}
+
+/* Hold the screen for 5 seconds */
+@keyframes holdScreen {
+  0%, 80% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+
+header {
+  padding: 20px;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+}
+
+
+
+
+
+/* General Dropdown Styles */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 5px;
+  width: 200px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding: 10px 15px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  margin-bottom: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #f0f0f0;
+  color: black;
+}
+
+/* Style for the menu item */
+.menu-item {
+  position: relative;
+  display: inline-block;
+}
+
+.has-submenu {
+  text-decoration: none;
+  color: #333;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* Style for the submenu */
+.submenu {
+  display: none; /* Hidden by default */
+  position: absolute;
+  left: 100%; /* Align to the right of the parent */
+  top: 0; /* Align below the parent */
+  background-color: #f9f9f9;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  z-index: 1000;
+  min-width: 150px;
+}
+
+/* Submenu link styles */
+.submenu a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #333;
+  white-space: nowrap;
+}
+
+.submenu a:hover {
+  background-color: #e0e0e0;
+}
+
+
+.submenu {
+  margin-left: 10px; /* Adds space between the parent and submenu */
+}
+
+
+/* Show dropdown on hover */
+li:hover .dropdown-content {
+  display: block;
+}
+

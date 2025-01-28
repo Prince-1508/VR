@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.card-container {
+    position: relative;
+}
+
+.photo-card {
+    background: linear-gradient(145deg, #ff80ff, #ff3385);
+    border-radius: 20px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.image-container {
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.text-container p {
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.sparkle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.sparkle span {
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+    animation: sparkle 1.5s infinite;
+}
+
+@keyframes sparkle {
+    0% {
+        transform: scale(0) translate(0, 0);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(2) translate(10px, 10px);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(0) translate(0, 0);
+        opacity: 0;
+    }
+}
